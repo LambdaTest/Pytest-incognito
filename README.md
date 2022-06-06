@@ -4,26 +4,10 @@ If you want to run you automation test in Pytest in incognito mode on Lambdatest
 
 # Steps:
 
-## Step 1: Add --incognito in browser arguments
-
-In the python file, add the '--incognito' argument to start browser in incognito mode. For example:
-
+To run your test in incognito mode, use the --incognito command line option when passing the run command like so:
 ```
-import pytest
-@pytest.fixture
-def chrome_options(chrome_options):
-    chrome_options.binary_location = '/path/to/chrome'
-    chrome_options.add_argument('--incognito')
-    return chrome_options
+pytest --incognito sample_test.py 
 ```
-
-## Step 2: Run your test
-
-```
-cd tests //navigate to tests directory
-python sample_todo.py
-```
-
 # Links:
 
 [LambdaTest Community](http://community.lambdatest.com/)
